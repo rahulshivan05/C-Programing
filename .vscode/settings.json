@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.html": "html",
+		"stdio.h": "c",
+		"corecrt_stdio_config.h": "c",
+		"corecrt.h": "c",
+		"_mingw.h": "c",
+		"_mingw_mac.h": "c"
+	}
+}
