@@ -1,15 +1,3 @@
-/*
-
-Convert into following:
-
-1:- Kilometers(kms) to miles
-2:- inches to foot
-3:- cms to inches
-4:- pound to kgs
-5:- inches to meters
-
-*/
-
 #include <stdio.h>
 #define miles 0.621371
 #define foot 0.0833333
@@ -17,118 +5,65 @@ Convert into following:
 #define kgs 0.453592
 #define meter 0.0254
 
-// 1:- Kilometers(kms) to miles
-
-int kilo_miles()
-{
-    int k;
-    printf("Enter the kilometer:\n");
-    scanf("%d", &k);
-    printf("you answer in miles is: %f\n", k * miles);
-}
-
-// 2:- inches to foot
-
-int inch_foot()
-{
-    int i;
-    printf("Enter you inches: ");
-    scanf("%d", &i);
-    printf("You inches converted to foot %f\n", i * foot);
-}
-
-// 3:- cms to inches
-
-int cms_inches()
-{
-    int i;
-    printf("Enter you centemeter: ");
-    scanf("%d", &i);
-    printf("You centemeter converted into inches %f\n", i * inches);
-}
-
-// 4:- pound to kgs
-
-int pound_kgs()
-{
-    int i;
-    printf("Enter you pound: ");
-    scanf("%d", &i);
-    printf("You pound converted into kgs %f\n", i * kgs);
-}
-
-// 5:- inches to meters
-
-int inches_meter()
-{
-    int i;
-    printf("Enter you inches: ");
-    scanf("%d", &i);
-    printf("You inches converted into meters %f\n", i * meter);
-}
-
 int main(int argc, char const *argv[])
 {
-    /* code */
-    int input;
+    char input;
+    int first;
+    float second;
 
-    // kilo_miles();
-    // inch_foot();
-    // cms_inches();
-    // pound_kgs();
-    // inches_meter();
-
-    printf("Enter number to print any thing you want: ");
-    scanf("%d", &input);
-
-    // while (input == 1)
-    // {
-    //     kilo_miles();
-    // }
-
-    // switch (input)
-    // {
-    // case 1:
-    //     kilo_miles();
-
-    // case 2:
-    //     inch_foot();
-
-    // case 3:
-    //     cms_inches();
-
-    // case 4:
-    //     pound_kgs();
-
-    // case 5:
-    //     inches_meter();
-
-    // case 0:
-    //     printf("Thank you for using my calculator.");
-    //     break;
-    // default:
-    //     printf("Enter any number to calculate.");
-    // }
-
-    while (input == 1)
+    while (1)
     {
-        kilo_miles();
+        printf("\nEnter the input character. q to quit\n1:-Kilometers(kms) to miles.\n2:- Inches to foot.\n3:- cms to Inches.\n4:- pound to kg.\n5:- Inches to meters.\n");
+        scanf(" %c", &input);
+        printf("You have enteres %c\n\n", input);
+
+        switch (input)
+        {
+        case 'q':
+            printf("Quitting the program....");
+            goto end;
+            break;
+
+        case '1':
+            printf("Enter kms to convert miles\n");
+            scanf("%d", &first);
+            second = first * miles;
+            printf("%d kms is equal %.4f miles\n \n", first, second);
+            break;
+
+        case '2':
+            printf("Enter Inches to convert Foot\n");
+            scanf("%d", &first);
+            second = first * foot;
+            printf("%d Inches is equal %.4f Foot\n \n", first, second);
+            break;
+
+        case '3':
+            printf("Enter Cms to convert Inches\n");
+            scanf("%d", &first);
+            second = first * inches;
+            printf("%d Cms is equal %.4f Inches\n \n", first, second);
+            break;
+
+        case '4':
+            printf("Enter Pound to convert Kgs\n");
+            scanf("%d", &first);
+            second = first * kgs;
+            printf("%d Pound is equal %.4f Kgs\n \n", first, second);
+            break;
+
+        case '5':
+            printf("Enter Inches to convert meters\n");
+            scanf("%d", &first);
+            second = first * meter;
+            printf("%d Inches is equal %.4f Meters\n \n", first, second);
+            break;
+
+        default:
+            break;
+        }
     }
-
-    /* Solution not satisfied me*/
-
-    // int marks;
-    // printf("Enter the marks: ");
-    // scanf("%d", &marks);
-
-    // if (marks > 50 & marks < 40)
-    // {
-    //     printf("BCA");
-    // }
-    // else
-    // {
-    //     printf("BA");
-    // }
+end:
 
     return 0;
 }
