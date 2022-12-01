@@ -47,11 +47,15 @@ int main(int argc, char const *argv[])
         amt = 220 + ((unit - 250) * 1.50);
     }
 
+    // Your Electricity bill before surcharge and taxes
+    printf("Electricity Bill Before taxes and surcharge = Rs. %.2f\n", amt);
+
     // Calculating total electricity bill after adding surcharge
     sur_charge = amt * 0.20;
+    printf("\nYour Tax and Surcharge of Electricity Bill = Rs. %.2f\n", sur_charge);
     total_amt = amt + sur_charge;
 
-    printf("Electricity Bill = Rs. %.2f", total_amt);
+    printf("\nYour Total Electricity Bill = Rs. %.2f\n", total_amt);
 
     return 0;
 }
