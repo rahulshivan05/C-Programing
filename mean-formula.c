@@ -9,12 +9,12 @@ int mean()
     float mean;
     int sum = 0;
     int n;
-    printf("Enter the Length of the Array you want to create\n");
+    printf("Enter the Length of the Frequency\n");
     scanf(" %d", &n);
 
     int values[n];
 
-    printf("Enter the value you want to save in Array\n");
+    printf("Enter the Frequency of the Question\n");
 
     for (int i = 0; i < n; i++)
     {
